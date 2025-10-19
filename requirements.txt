@@ -1,0 +1,9 @@
+google-genai
+gitpython
+psutil
+python-dotenv
+numpy
+SpeechRecognition
+openai-whisper
+pyaudio
+pyserial

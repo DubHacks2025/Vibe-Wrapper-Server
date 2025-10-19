@@ -1,0 +1,80 @@
+User: Open my downloads folder.
+{"type":"open_path","args":{"path":"~/Downloads"},"meta":{"confidence":0.93,"source":"voice","reason":"open folder"}}
+
+User: Play lofi playlist on YouTube.
+{"type":"open_url","args":{"url":"https://www.youtube.com/results?search_query=lofi+playlist"},"meta":{"confidence":0.87,"source":"voice","reason":"search results"}}
+
+User: Update repo.
+{"type":"git_update_repo","args":{"path":"~/projects/current","strategy":"smart"},"meta":{"confidence":0.82,"source":"voice","reason":"common flow"}}
+
+User: New git repo called sensor-agent.
+{"type":"git_init","args":{"project_name":"sensor-agent"},"meta":{"confidence":0.86,"source":"voice","reason":"init repo"}}
+
+User: Clone https://github.com/foo/bar then set up.
+{"type":"git_clone","args":{"repo_url":"https://github.com/foo/bar"},"meta":{"confidence":0.84,"source":"voice","reason":"clone"}}
+
+User: Show CPU usage.
+{"type":"system_status","args":{"status":"cpu"},"meta":{"confidence":0.88,"source":"voice","reason":"status"}}
+
+User: List all running processes.
+{"type":"process_list","args":{"limit":20,"sort_by":"cpu"},"meta":{"confidence":0.92,"source":"voice","reason":"process monitoring"}}
+
+User: Show system resources.
+{"type":"system_resources","args":{},"meta":{"confidence":0.89,"source":"voice","reason":"system monitoring"}}
+
+User: Turn on focus mode.
+{"type":"enable_focus_mode","args":{},"meta":{"confidence":0.90,"source":"voice","reason":"enable focus mode"}}
+
+User: Focus mode for 30 minutes.
+{"type":"set_focus_duration","args":{"minutes":30},"meta":{"confidence":0.88,"source":"voice","reason":"set focus duration"}}
+
+User: Turn off do not disturb.
+{"type":"disable_focus_mode","args":{},"meta":{"confidence":0.90,"source":"voice","reason":"disable focus mode"}}
+
+User: Take a screenshot.
+{"type":"take_screenshot","args":{},"meta":{"confidence":0.92,"source":"voice","reason":"take screenshot"}}
+
+User: Take a screenshot and summarize.
+{"type":"screenshot_and_summarize","args":{"language":"english"},"meta":{"confidence":0.90,"source":"voice","reason":"screenshot and summarize"}}
+
+User: Take a screenshot and translate to Spanish.
+{"type":"screenshot_and_translate","args":{"language":"spanish"},"meta":{"confidence":0.89,"source":"voice","reason":"screenshot and translate"}}
+
+User: Kill process with PID 1234.
+{"type":"kill_process","args":{"pid":1234},"meta":{"confidence":0.85,"source":"voice","reason":"process management"}}
+
+User: Kill all Chrome processes.
+{"type":"kill_processes_by_name","args":{"name":"Google Chrome"},"meta":{"confidence":0.87,"source":"voice","reason":"process cleanup"}}
+
+User: Close all Chrome tabs.
+{"type":"kill_processes_by_name","args":{"name":"Google Chrome"},"meta":{"confidence":0.89,"source":"voice","reason":"close application"}}
+
+User: Quit Chrome application.
+{"type":"kill_processes_by_name","args":{"name":"Google Chrome"},"meta":{"confidence":0.88,"source":"voice","reason":"quit application"}}
+
+User: Close all Firefox windows.
+{"type":"kill_processes_by_name","args":{"name":"Firefox"},"meta":{"confidence":0.87,"source":"voice","reason":"close application"}}
+
+User: Press command shift p.
+{"type":"key_press","args":{"keys":"command+shift+p"},"meta":{"confidence":0.90,"source":"voice","reason":"hotkey"}}
+
+User: Delete all my files.
+{"type":"none","args":{},"meta":{"confidence":0.0,"source":"voice","reason":"unsafe"}}
+
+User: Commit my changes.
+{"type":"commit","args":{},"meta":{"confidence":0.93,"source":"voice","reason":"git commit"}}
+
+User: Save my work to git.
+{"type":"commit","args":{},"meta":{"confidence":0.91,"source":"voice","reason":"git commit"}}
+
+User: Update repo.
+{"type":"commit","args":{},"meta":{"confidence":0.90,"source":"voice","reason":"update = commit"}}
+
+User: Commit and push.
+{"type":"commit","args":{"push":true},"meta":{"confidence":0.88,"source":"voice","reason":"commit + push"}}
+
+User: Commit project in /Users/alexjshepler/Projects/Red-Book.
+{"type":"commit","args":{"path":"/Users/alexjshepler/Projects/Red-Book"},"meta":{"confidence":0.90,"source":"voice","reason":"explicit path"}}
+
+User: Save progress.
+{"type":"commit","args":{},"meta":{"confidence":0.85,"source":"voice","reason":"save = commit"}}

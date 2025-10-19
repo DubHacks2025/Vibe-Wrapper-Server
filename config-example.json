@@ -1,0 +1,7 @@
+{
+    "gemini": {
+        "key": "AIzaSyDhiNrQfuzeISTrUFn8QoFoQMe_ffzSkfc",
+        "model": "gemini-2.5-flash"
+    },
+    "default_mic": null
+}
