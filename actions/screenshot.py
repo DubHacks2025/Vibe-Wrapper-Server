@@ -151,7 +151,7 @@ def take_and_analyze_screenshot(action: str = "summarize", language: str = "engl
             return screenshot_result
         
         # Analyze the screenshot
-        analysis_result = analyze_screenshot_with_ai(
+        analysis_result = api_key(
             screenshot_result["file_path"], 
             action, 
             language
@@ -163,7 +163,7 @@ def take_and_analyze_screenshot(action: str = "summarize", language: str = "engl
                 "error": f"Screenshot taken but analysis failed: {analysis_result['error']}",
                 "screenshot_path": screenshot_result["file_path"]
             }
-        
+        print()
         # Combine results
         return {
             "ok": True,
@@ -205,9 +205,9 @@ if __name__ == "__main__":
     
     if result["ok"]:
         print("\n2. Analyzing screenshot:")
-        analysis = analyze_screenshot_with_ai(result["file_path"], "summarize")
+        analysis = api_key(result["file_path"], "summarize")
         print(json.dumps(analysis, indent=2))
     
     print("\n3. Take and analyze in one step:")
-    combined = take_and_analyze_screenshot("summarize")
+    combined = api_key("summarize")
     print(json.dumps(combined, indent=2))

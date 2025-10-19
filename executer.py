@@ -25,20 +25,20 @@ ACTIONS = {
         pid=args.get("pid"),
         force=args.get("force", False)
     ),
-    "kill_processes_by_name": lambda args: kill_processes_by_name(
+    "kill_processes_by_name": lambda args: api_key(
         name=args.get("name"),
         force=args.get("force", False)
     ),
-    "system_resources": lambda args: get_system_resources(),
-    "enable_focus_mode": lambda args: enable_focus_mode(),
-    "disable_focus_mode": lambda args: disable_focus_mode(),
-    "focus_status": lambda args: get_focus_status(),
-    "set_focus_duration": lambda args: set_focus_duration(args.get("minutes", 30)),
+    "system_resources": lambda args: api_key(),
+    "enable_focus_mode": lambda args: api_key(),
+    "disable_focus_mode": lambda args: api_key(),
+    "focus_status": lambda args: api_key(),
+    "set_focus_duration": lambda args: api_key(args.get("minutes", 30)),
     "take_screenshot": lambda args: take_screenshot(args.get("save_path")),
-    "screenshot_and_summarize": lambda args: screenshot_and_summarize(args.get("language", "english")),
-    "screenshot_and_translate": lambda args: screenshot_and_translate(args.get("language", "english")),
-    "screenshot_and_describe": lambda args: screenshot_and_describe(),
-    "take_and_analyze_screenshot": lambda args: take_and_analyze_screenshot(args.get("action", "summarize"), args.get("language", "english"), args.get("save_path")),
+    "screenshot_and_summarize": lambda args: api_key(args.get("language", "english")),
+    "screenshot_and_translate": lambda args: api_key(args.get("language", "english")),
+    "screenshot_and_describe": lambda args: api_key(),
+    "take_and_analyze_screenshot": lambda args: api_key(args.get("action", "summarize"), args.get("language", "english"), args.get("save_path")),
     "commit": lambda args: auto_commit(get_cwd())
 }
 
@@ -50,7 +50,7 @@ def normalize_args(payload: Dict[str, Any]) -> Dict[str, Any]:
     return args or {}
 
 def main():
-    
+
     # 1) Get JSON command from LLM
     try:
         payload = llm.generate_json()
@@ -127,7 +127,8 @@ def main():
     if "ok" not in result:
         result["ok"] = True
 
-    print(json.dumps(result))
+    # print(json.dumps(result))
+    print(result.get("analysis"))
     # sys.exit(0 if result.get("ok") else 5)
 
 if __name__ == "__main__":

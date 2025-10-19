@@ -33,7 +33,7 @@ void showDigitsTest() {
 void showRecording() {
   // “REC_”
   uint8_t rec[] = {
-    SEG_E | SEG_G | SEG_A | SEG_F | SEG_B, // crude 'R'
+    SEG_E | SEG_G, //  'R'
     SEG_A | SEG_F | SEG_G | SEG_E | SEG_D, // 'E'
     SEG_A | SEG_F | SEG_E | SEG_D,         // 'C'
     0x00
