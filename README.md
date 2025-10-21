@@ -216,4 +216,5 @@ Vibe Wrapper acts as a personal AGI shell for developers, blending hardware inte
 All rights reserved. 
 This project was developed as part of DubHacks 2025. 
 No part of this code or its derivatives may be used, reproduced, or distributed for commercial purposes without the explicit permission of all original contributors.
+
 © 2025 Vibe Wrapper Team (Jayson Xu, Yuanhao Zeng, Alex Shepler, Brinda Moudgalya).  
