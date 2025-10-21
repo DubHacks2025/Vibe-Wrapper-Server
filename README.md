@@ -1,5 +1,7 @@
 # Vibe Wrapper
 
+Uses Python3.11
+
 Not Siri. Not Alexa. Your own AGI, wired straight into your machine.
 
 Credits: Jayson, Alex, Brinda, Torres
