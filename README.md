@@ -212,3 +212,7 @@ Submit a PR and tag reviewers: Jayson, Alex, Brinda, Torres.
 We implemented the core Gemini orchestration logic — connecting hardware triggers, Whisper voice input, and Gemini reasoning into one seamless system.
 Everything runs locally, ensuring privacy and full control.
 Vibe Wrapper acts as a personal AGI shell for developers, blending hardware interaction with real code automation.
+
+All rights reserved. 
+This project was developed as part of DubHacks 2025. 
+No part of this code or its derivatives may be used, reproduced, or distributed for commercial purposes without the explicit permission of all original contributors.
