@@ -51,14 +51,21 @@ def check_config():
 
 def main():
     # Start the server
-        # thread = threading.Thread(target=server.main, daemon=True)
-        # print("Starting the server...")
-        # thread.start()
+    thread = threading.Thread(target=server.main, daemon=True)
+    print("Starting the server...")
+    thread.start()
 
     check_config()
-    import arduino_trigger
 
-    arduino_trigger.start_trigger()
+    if input('Do you have an external device that you want to use to trigger the activation? (y/n): ').lower().strip() == 'y':
+        import arduino_trigger
+        arduino_trigger.start_trigger()
+    else:
+        import executer
+        while True:
+            executer.main()
+
+            input('Press ENTER to start listening')
 
 
 if __name__ == "__main__":
